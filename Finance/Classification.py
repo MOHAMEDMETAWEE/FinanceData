@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 plt.style.use('ggplot')
 st.set_page_config(page_title = "Customer Classifiaction")
-st.write("to start you have to upload the file with name 'full_data' that you can find with link of this page in my linked in page")
-st.markdown("[Click here to visit my linked in page](https://www.linkedin.com/in/mohamed-ahmed-metawee-b03614264/)")
+st.write("to start you have to upload the file with name 'full_data' that you can find in the link blow")
+st.markdown("[Click here to go to file](https://drive.google.com/file/d/1Ex5r8ukUsyulfh66wAb4-QWcKfrZYpCU/view?usp=drive_link)")
 
  
 st.title("Studying the spending behavior of specific customer groups.")
