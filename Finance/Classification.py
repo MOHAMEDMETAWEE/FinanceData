@@ -5,7 +5,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 plt.style.use('ggplot')
-full=pd.read_csv('C:/Users/Mohamed/Desktop/data sests for data analysis/full_data.csv')
+st.write("TT")
+uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
+full=pd.read_csv(uploaded_file)
 full.rename(columns={'marital status':'marital_status'},inplace=True)
 st.set_page_config(page_title = "Customer Classifiaction") 
 st.title("Studying the spending behavior of specific customer groups.")
