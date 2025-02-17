@@ -5,8 +5,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 plt.style.use('ggplot')
+st.set_page_config(page_title = "Customer Classifiaction")
 st.write("TT")
-st.set_page_config(page_title = "Customer Classifiaction") 
+ 
 st.title("Studying the spending behavior of specific customer groups.")
 demo=st.sidebar.selectbox('Choose Demographic:',options=['Occupation','Age Group','Marital Status','Category','City','Gender'])
 cho=st.sidebar.selectbox(f'Choose {demo}:',options=full[demo.lower().replace(" ","_")].unique())
