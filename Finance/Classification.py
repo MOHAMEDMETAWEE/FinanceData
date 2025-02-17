@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 plt.style.use('ggplot')
 st.write("TT")
+st.set_page_config(page_title = "Customer Classifiaction") 
+st.title("Studying the spending behavior of specific customer groups.")
+demo=st.sidebar.selectbox('Choose Demographic:',options=['Occupation','Age Group','Marital Status','Category','City','Gender'])
+cho=st.sidebar.selectbox(f'Choose {demo}:',options=full[demo.lower().replace(" ","_")].unique())
+mon=st.sidebar.selectbox('Choose Month:',options=['May',"June",'July','August','September','October'])
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
 if uploaded_file is not None:
           full=pd.read_csv(uploaded_file)
           full.rename(columns={'marital status':'marital_status'},inplace=True)
-          st.set_page_config(page_title = "Customer Classifiaction") 
-          st.title("Studying the spending behavior of specific customer groups.")
-          demo=st.sidebar.selectbox('Choose Demographic:',options=['Occupation','Age Group','Marital Status','Category','City','Gender'])
-          cho=st.sidebar.selectbox(f'Choose {demo}:',options=full[demo.lower().replace(" ","_")].unique())
-          mon=st.sidebar.selectbox('Choose Month:',options=['May',"June",'July','August','September','October'])
           
           df= full.groupby([full[demo.lower().replace(" ","_")],full['month'],full['payment_type']])['spend'].agg([('total','sum'),('count','count'),('AVG','mean')]).reset_index()
           col1,col2=st.columns(2)
