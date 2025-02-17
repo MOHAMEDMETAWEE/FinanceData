@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 plt.style.use('ggplot')
 st.set_page_config(page_title = "Customer Classifiaction")
-st.write("TT")
+st.write("uplaod the file with name full data")
  
 st.title("Studying the spending behavior of specific customer groups.")
 uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
