@@ -7,7 +7,7 @@ import plotly.express as px
 plt.style.use('ggplot')
 st.set_page_config(page_title = "Customer Classifiaction")
 st.write("to start you have to upload the file with name 'full_data' that you can find on Google Drive by clicking the link blow")
-st.markdown("[Click](https://drive.google.com/file/d/1Ex5r8ukUsyulfh66wAb4-QWcKfrZYpCU/view?usp=drive_link)")
+st.markdown("[Click me](https://drive.google.com/file/d/1Ex5r8ukUsyulfh66wAb4-QWcKfrZYpCU/view?usp=drive_link)")
 
  
 st.title("Studying the spending behavior of specific customer groups.")
