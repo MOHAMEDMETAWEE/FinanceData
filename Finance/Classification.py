@@ -81,4 +81,5 @@ if uploaded_file is not None:
           a[0].legend([f'{pay1}',f'{pay2}'])
           a[1].legend([f'{pay1}',f'{pay2}'])
           st.pyplot(f)
+          st.cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].cont()}')
 
