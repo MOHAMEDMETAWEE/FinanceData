@@ -48,7 +48,8 @@ if uploaded_file is not None:
           cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].max()}')
           cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].min()}')
           cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].min()}')
-          
+          cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].value_count()}')
+
           f,a= plt.subplots(2)
           #sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
                       # bins=250,
@@ -81,5 +82,4 @@ if uploaded_file is not None:
           a[0].legend([f'{pay1}',f'{pay2}'])
           a[1].legend([f'{pay1}',f'{pay2}'])
           st.pyplot(f)
-          st.cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].cont()}')
-
+          
