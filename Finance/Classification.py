@@ -43,6 +43,7 @@ if uploaded_file is not None:
           pay1=cl1.selectbox('Choose Payment Type 1:',options=full['payment_type'].unique())
           pay2=cl2.selectbox('Choose Payment Type 2:',options=['UPI','Credit Card','Net Banking','Debit Card'])
           cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].count()}')
+          cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].count()}')
           f,a= plt.subplots(2)
           sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
                        bins=250,
