@@ -48,7 +48,7 @@ if uploaded_file is not None:
           cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].max()}')
           cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].min()}')
           cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].min()}')
-          cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].values_count()}')
+          cl1.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'].value_counts()}')
 
           f,a= plt.subplots(2)
           #sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
