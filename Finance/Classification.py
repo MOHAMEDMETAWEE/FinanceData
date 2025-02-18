@@ -50,20 +50,20 @@ if uploaded_file is not None:
           cl2.write(f'{full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'].min()}')
           
           f,a= plt.subplots(2)
-          sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
-                       bins=250,
-                       kde=True,
-                       stat='probability',
-                       cumulative=True,
-                       ax=a[1]
-                      )
-          sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'],
-                       bins=250,
-                       kde=True,
-                       stat='probability',
-                       cumulative=True,
-                      ax=a[1]
-                      )
+          #sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
+                      # bins=250,
+                     #  kde=True,
+                    #   stat='probability',
+                   #    cumulative=True,
+                  #     ax=a[1]
+                 #     )
+          #sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay2}"')['spend'],
+           #            bins=250,
+            #           kde=True,
+             #          stat='probability',
+              #         cumulative=True,
+               #       ax=a[1]
+                #      )
           sns.histplot(full.query(f'{demo.lower().replace(' ',"_")}=="{cho}"').query(f'month=="{mon}"').query(f'payment_type=="{pay1}"')['spend'],
                        bins=250,
                        kde=True,
